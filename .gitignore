@@ -1,2 +1,4 @@
 # CMake artifacts
 build*
+# Clangd cache
+.cache/
