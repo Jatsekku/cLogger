@@ -23,7 +23,13 @@ include(CTest)
 #---------------------------------- Options -----------------------------------
 # Shared/Static liibrary switch
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+# Build examples
+option(BUILD_EXAMPLES "Build examples" ON)
 
 #------------------------------- Subdirectories -------------------------------
 add_subdirectory(src)
+
+if(BUILD_EXAMPLES AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/CMakeLists.txt")
+    add_subdirectory(examples)
+endif()
 

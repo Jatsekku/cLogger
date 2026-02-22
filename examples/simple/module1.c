@@ -1,0 +1,7 @@
+#include "cLogger/cLogger.h"
+
+LOGGER_REGISTER_MODULE("module1", LOG_LEVEL_ALL);
+
+void module1_foo(void) {
+    LOG_DBG("Some debug message from module1 %s %d %u", (const char*)"test", -10, 4);
+}
