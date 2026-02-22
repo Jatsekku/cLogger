@@ -7,6 +7,9 @@ project(cLogger
     LANGUAGES C
 )
 
+# Make LSP happy
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Include GNUInstallDirs to use standard directory variables
 include(GNUInstallDirs)
 
