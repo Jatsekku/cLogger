@@ -7,5 +7,4 @@ int main(void) {
 	module1_foo();
 	module2_foo();
 
-	logger_printModulesInfo();
 }

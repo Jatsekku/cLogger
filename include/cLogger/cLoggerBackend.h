@@ -2,7 +2,6 @@
 
 #include <stdint.h>
 
-#include "cLoggerCommon.h"
 
 // typedef void loggerEmitLogCallbackFunction(const char *const log, uint16_t log_size);
                            
@@ -10,34 +9,22 @@
 // void logger_printMessage(const struct loggerMessage *const message);
 
 /**
- * @brief Print 
- * 
- * @param[out] config Pointer to virtualLink configuration
- * @param[in]  interface_ipv4_address_string String representin interface IPv4 address
- * @param[in]  tx_socket_address_string String representing TX socket address
- * @param[in]  tx_socket_address_string String representing RX socket address
- * @return     Bool infroming if config has been successfully filled with data
+ * @brief Print informaation about registered modules
  */
-void logger_printModulesInfo(void);
+void cLogger_printModulesInfo(void);
 
 /**
- * @brief Fill config structure by providing appropriate strings
+ * @brief Set log level for module with specified index
  * 
- * @param[out] config Pointer to virtualLink configuration
- * @param[in]  interface_ipv4_address_string String representin interface IPv4 address
- * @param[in]  tx_socket_address_string String representing TX socket address
- * @param[in]  tx_socket_address_string String representing RX socket address
- * @return     Bool infroming if config has been successfully filled with data
+ * @param[in]  module_index Index of module that has to be set
+ * @param[in]  log_level Desired log level
  */
-void logger_setModuleLogLevelByIndex(uint16_t module_index, uint8_t log_level);
+void cLogger_setModuleLogLevelByIndex(uint16_t module_index, uint8_t log_level);
 
 /**
- * @brief Fill config structure by providing appropriate strings
- * 
- * @param[out] config Pointer to virtualLink configuration
- * @param[in]  interface_ipv4_address_string String representin interface IPv4 address
- * @param[in]  tx_socket_address_string String representing TX socket address
- * @param[in]  tx_socket_address_string String representing RX socket address
- * @return     Bool infroming if config has been successfully filled with data
+ * @brief Set log level for module with specified name
+ *
+ * @param[in]  module_name String of module that has to be set
+ * @param[in]  log_level Desired log level
  */
-void logger_setModuleLogLevelByName(char *module_name, uint8_t log_level);
+void cLogger_setModuleLogLevelByName(char *module_name, uint8_t log_level);
